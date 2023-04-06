@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_happy_place_cv_main_marginStartEnd"
+        android:layout_marginEnd="@dimen/item_happy_place_cv_main_marginStartEnd"
+        android:background="@color/white_color"
+        app:cardCornerRadius="@dimen/item_happy_place_cv_corner_radius"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/item_happy_place_content_padding">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_place_image"
+                android:layout_width="@dimen/item_happy_place_circular_image_size"
+                android:layout_height="@dimen/item_happy_place_circular_image_size"
+                android:contentDescription="@string/image_content_description"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_color="@color/circular_image_border_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_happy_place_ll_marginStart"
+                android:layout_marginEnd="@dimen/item_happy_place_ll_marginEnd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/item_happy_place_title_textSize"
+                    android:textStyle="bold"
+                    tools:text="Name"/>
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/item_happy_place_description_text_color"
+                    android:textSize="@dimen/item_happy_place_description_textSize"
+                    tools:text="description"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
